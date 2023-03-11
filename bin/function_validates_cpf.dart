@@ -1,5 +1,6 @@
-import 'package:function_validates_cpf/function_validates_cpf.dart' as function_validates_cpf;
+import 'package:function_validates_cpf/control_panel.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${function_validates_cpf.calculate()}!');
+void main() {
+  final controlPanel = ControlPanel();
+  controlPanel.panel();
 }
