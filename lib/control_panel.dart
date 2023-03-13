@@ -10,7 +10,6 @@ class ControlPanel {
           ''';
 
   int? _choice;
-
   String? _inputCPF;
   dynamic _validateCpf;
 
@@ -26,12 +25,12 @@ class ControlPanel {
           break;
 
         case 1:
-          print('Digite seu CPF');
-          _inputCPF = stdin.readLineSync()!;
-          _validateCpf = FunctionValidatesCpf();
-          _validateCpf.cpf = _inputCPF;
+          print('Digite seu CPF:');
+          _inputCPF = stdin.readLineSync();
+          _validateCpf = FunctionValidatesCpf(cpf: _inputCPF!);
+
           print(_validateCpf.cpf);
-          print(_validateCpf.validator);
+          print('CPF: ${_validateCpf.isValid()}');
           break;
 
         default:
